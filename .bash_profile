@@ -16,7 +16,16 @@ shopt -s nocaseglob;
 shopt -s histappend;
 
 # Autocorrect typos in path names when using `cd`
-shopt -s cdspell;
+# shopt -s cdspell;
+
+# Check the window size after each command
+shopt -s checkwinsize
+
+# Attempt to save all lines of a multiple-line command in the same history entry
+shopt -s cmdhist
+
+# Save multiple-line commands to the history with embedded newlines
+shopt -s lithist
 
 # Enable some Bash 4 features when possible:
 # * `autocd`, e.g. `**/qux` will enter `./foo/bar/baz/qux`
@@ -24,6 +33,12 @@ shopt -s cdspell;
 for option in autocd globstar; do
 	shopt -s "$option" 2> /dev/null;
 done;
+
+# History
+export HISTCONTROL=erasedups:ignoredups:ignorespace
+export PROMPT_DIRTRIM=2
+export HISTSIZE=10000
+export HISTFILESIZE=400000000
 
 # Add tab completion for many Bash commands
 if which brew &> /dev/null && [ -r "$(brew --prefix)/etc/profile.d/bash_completion.sh" ]; then
