@@ -24,6 +24,14 @@ else # macOS `ls`
 	export LSCOLORS='BxBxhxDxfxhxhxhxhxcxcx'
 fi
 
+# Spelling correction
+alias cd..='cd ..'
+alias ks='ls'
+alias kk='ls -l'
+alias which='type -a'
+alias ll='ls -l'
+alias tailf='tail -f'
+
 # List all files colorized in long format
 alias l="ls -lF ${colorflag}"
 
