@@ -1,4 +1,13 @@
+[user]
+	email = yzkp@outlook.com
+	name = yangzk
+
 [alias]
+	st = status
+	co = checkout
+	cm = commit
+	br = branch
+	cl = clean -Xfd
 
 	# View abbreviated SHA, description, and history graph of the latest 20 commits.
 	l = log --pretty=oneline -n 20 --graph --abbrev-commit
@@ -127,7 +136,7 @@
 [commit]
 
 	# https://help.github.com/articles/signing-commits-using-gpg/
-	gpgsign = true
+	gpgsign = false
 
 [diff]
 
